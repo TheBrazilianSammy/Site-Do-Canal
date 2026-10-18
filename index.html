@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The_BrazilianSammy - Site Oficial</title>
 <meta name="description" content="Site oficial do The_BrazilianSammy - Roblox com personalidade e estilo">
+
+<!-- ÍCONE DO ATALHO - SÓ ISSO MUDA -->
+<link rel="icon" type="image/png" href="https://i.postimg.cc/qvkn2yXK/25-Sem-Titulo-20261017120112.png">
+<link rel="apple-touch-icon" href="https://i.postimg.cc/qvkn2yXK/25-Sem-Titulo-20261017120112.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://i.postimg.cc/qvkn2yXK/25-Sem-Titulo-20261017120112.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="The_BrazilianSammy">
+<meta name="theme-color" content="#070913">
+<meta name="application-name" content="The_BrazilianSammy">
+<link rel="manifest" href='data:application/json;base64,[STRIPPED]'>
+
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -44,6 +55,14 @@ section{padding:48px 0;border-top:1px solid var(--line)}
 .link-card{background:#11132b;border:1px solid var(--line);border-radius:20px;padding:18px;text-decoration:none;color:#fff;transition:.2s}
 .link-card:hover{transform:translateY(-3px);border-color:var(--blue)}
 #loading{color:var(--muted);text-align:center;padding:24px}
+footer{border-top:1px solid var(--line);padding:32px 0 40px 0;background:rgba(0,0,0,.2)}
+.footer-inner{display:flex;flex-direction:column;gap:12px;align-items:center;justify-content:space-between;text-align:center}
+@media(min-width:700px){.footer-inner{flex-direction:row;text-align:left}}
+.footer-logo{display:flex;align-items:center;gap:10px;font-family:'Syne';font-weight:800;font-size:14px}
+.footer-logo img{width:28px;height:28px;border-radius:8px;object-fit:cover}
+.footer-credits{font-size:11px;color:var(--muted);line-height:1.6}
+.footer-credits strong{color:#fff}
+.footer-credits span{color:var(--blue)}
 </style>
 </head>
 <body>
@@ -71,15 +90,24 @@ section{padding:48px 0;border-top:1px solid var(--line)}
   </div>
 </div></section>
 
-<script>
-const CHANNEL_ID = 'UCfg6RKTzx8Wj2pvtc_olVSw';
-const UPLOADS_PLAYLIST = 'UUfg6RKTzx8Wj2pvtc_olVSw';
+<section class="discord" style="text-align:center;padding:64px 16px;background:radial-gradient(ellipse at center, rgba(0,229,255,.12), transparent 70%)"><div class="container" style="max-width:700px"><h2 class="section-title">ENTRA PRO<br>DISCORD DA<br><span style="color:#00E5FF">COMUNIDADE.</span></h2><a href="https://discord.gg/794qqXym7" target="_blank" class="btn btn-ghost" style="margin-top:20px;padding:14px 28px;border-radius:16px">Entrar no Discord →</a></div></section>
 
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-logo"><img src="https://i.postimg.cc/nrSc2Fzg/44ea40dc-0e21-519e-3316-1fbd08966ca2.jpg"> The_BrazilianSammy</div>
+    <div class="footer-credits">
+      <strong>© 2026 The_BrazilianSammy.</strong> Todos os direitos reservados.<br>
+      Site criado com <span>♥</span> para a comunidade BR | Design & Code by <strong>The_BrazilianSammy</strong><br>
+      <span style="font-size:10px;opacity:.7">Roblox não é afiliado a este site. Feito para fãs, por fãs.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const UPLOADS_PLAYLIST = 'UUfg6RKTzx8Wj2pvtc_olVSw';
 async function loadVideos() {
   const grid = document.getElementById('videosGrid');
   const loading = document.getElementById('loading');
-
-  // MÉTODO 1: API lemnoslife - playlistItems (funciona no GitHub)
   try {
     const url = `https://yt.lemnoslife.com/noKey/playlistItems?part=snippet&playlistId=${UPLOADS_PLAYLIST}`;
     const res = await fetch(url);
@@ -92,41 +120,17 @@ async function loadVideos() {
         const title = snip.title;
         const thumb = snip.thumbnails.medium.url;
         const date = new Date(snip.publishedAt).toLocaleDateString('pt-BR');
-        return `
-          <a href="https://www.youtube.com/watch?v=${videoId}" target="_blank" class="v-card">
-            <div class="v-thumb"><img src="${thumb}" loading="lazy" alt="${title}"></div>
-            <div class="v-body"><div class="v-title">${title}</div><div class="v-date">${date}</div></div>
-          </a>
-        `;
+        return `<a href="https://www.youtube.com/watch?v=${videoId}" target="_blank" class="v-card"><div class="v-thumb"><img src="${thumb}" loading="lazy"></div><div class="v-body"><div class="v-title">${title}</div><div class="v-date">${date}</div></div></a>`;
       }).join('');
       loading.style.display = 'none';
       grid.style.display = 'grid';
       return;
     }
-  } catch (e) {
-    console.log('Método 1 falhou', e);
-  }
-
-  // MÉTODO 2 - FALLBACK GARANTIDO: 4 iframes com seus últimos vídeos (sempre funciona)
-  console.log('Usando fallback com 4 iframes');
-  grid.innerHTML = [0,1,2,3].map(i => `
-    <div class="v-card">
-      <div class="v-thumb">
-        <iframe src="https://www.youtube.com/embed?listType=playlist&list=${UPLOADS_PLAYLIST}&index=${i+1}" 
-        frameborder="0" allowfullscreen loading="lazy" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
-        </iframe>
-      </div>
-      <div class="v-body">
-        <div class="v-title">Vídeo #${i+1} - The_BrazilianSammy</div>
-        <div class="v-date">youtube.com/@the_braziliansammy</div>
-      </div>
-    </div>
-  `).join('');
+  } catch (e) {}
+  grid.innerHTML = [0,1,2,3].map(i => `<div class="v-card"><div class="v-thumb"><iframe src="https://www.youtube.com/embed?listType=playlist&list=${UPLOADS_PLAYLIST}&index=${i+1}" frameborder="0" allowfullscreen loading="lazy"></iframe></div><div class="v-body"><div class="v-title">Vídeo #${i+1} - The_BrazilianSammy</div><div class="v-date">youtube.com/@the_braziliansammy</div></div></div>`).join('');
   loading.style.display = 'none';
   grid.style.display = 'grid';
 }
-
 loadVideos();
 </script>
 </body>
