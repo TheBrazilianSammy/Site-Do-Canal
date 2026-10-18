@@ -3,16 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The_BrazilianSammy</title>
+<title>The_BrazilianSammy - Site Oficial</title>
+<meta name="description" content="Site oficial do The_BrazilianSammy - Roblox com personalidade e estilo">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#070913;--blue:#00E5FF;--purple:#8B5CF6;--muted:rgba(255,255,255,.55);--line:rgba(255,255,255,.1)}
-body{background:var(--bg);color:#fff;font-family:'Space Grotesk',sans-serif;overflow-x:hidden}
-.container{width:100%;max-width:1120px;margin:0 auto;padding:0 16px}
+:root{--bg:#070913;--blue:#00E5FF;--muted:rgba(255,255,255,.55);--line:rgba(255,255,255,.1)}
+body{background:var(--bg);color:#fff;font-family:'Space Grotesk',sans-serif}
+.container{max-width:1120px;margin:0 auto;padding:0 16px}
 header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(7,9,19,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--line);height:56px;display:flex;align-items:center}
-.logo{display:flex;align-items:center;gap:10px;font-family:'Syne';font-weight:800;font-size:15px}
-.logo-img{width:36px;height:36px;border-radius:10px;object-fit:cover;border:1px solid rgba(0,229,255,.3);box-shadow:0 0 16px rgba(0,229,255,.4)}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Syne';font-weight:800}
+.logo-img{width:36px;height:36px;border-radius:10px;object-fit:cover}
 .btn{border-radius:12px;font-weight:700;border:0;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;cursor:pointer}
 .btn-ghost{background:rgba(255,255,255,.08);border:1px solid var(--line);color:#fff;padding:10px 18px}
 .btn-blue{background:var(--blue);color:#000;padding:13px 22px;box-shadow:0 0 24px rgba(0,229,255,.35);border-radius:14px}
@@ -21,138 +22,111 @@ header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(7,9,19,.92
 @media(min-width:900px){.hero-layout{flex-direction:row;align-items:center;gap:32px}}
 .badge{display:inline-flex;padding:5px 10px;border-radius:999px;background:rgba(0,229,255,.1);border:1px solid rgba(0,229,255,.25);color:var(--blue);font-size:11px;font-weight:700}
 .hero-title{font-family:'Syne';font-weight:800;font-size:clamp(32px,8vw,62px);line-height:.92;margin-top:14px;text-transform:uppercase}
-.hero-title span{color:var(--blue);text-shadow:0 0 18px rgba(0,229,255,.5)}
-.hero-desc{margin-top:14px;color:var(--muted);font-size:15px}
-.hero-actions{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px}
-.avatar-wrap{width:100%;display:flex;justify-content:center}
+.hero-title span{color:var(--blue)}
 .avatar-card{width:100%;max-width:340px;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:22px;padding:12px}
-.avatar-inner{width:100%;aspect-ratio:4/4.6;border-radius:16px;overflow:hidden;background:#0c0f22}
+.avatar-inner{width:100%;aspect-ratio:4/4.6;border-radius:16px;overflow:hidden}
 .avatar-main-img{width:100%;height:100%;object-fit:cover}
 section{padding:48px 0;border-top:1px solid var(--line)}
 .section-title{font-family:'Syne';font-weight:800;font-size:clamp(28px,7vw,44px);line-height:.9}
 .videos{display:grid;grid-template-columns:1fr;gap:12px;margin-top:24px}
 @media(min-width:700px){.videos{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:1024px){.videos{grid-template-columns:repeat(4,1fr)}}
-.v-card{background:#11132b;border:1px solid var(--line);border-radius:18px;overflow:hidden;text-decoration:none;color:#fff;transition:.2s}
-.v-card:hover{transform:translateY(-4px);border-color:rgba(0,229,255,.4)}
-.v-thumb{aspect-ratio:16/9;background:#0e1020}
+.v-card{background:#11132b;border:1px solid var(--line);border-radius:18px;overflow:hidden;text-decoration:none;color:#fff;transition:.2s;display:block}
+.v-card:hover{transform:translateY(-4px);border-color:var(--blue);box-shadow:0 0 20px rgba(0,229,255,.15)}
+.v-thumb{aspect-ratio:16/9;background:#0e1020;position:relative;overflow:hidden}
 .v-thumb img{width:100%;height:100%;object-fit:cover}
-.v-body{padding:12px}.v-title{font-weight:700;font-size:13px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.v-thumb iframe{width:100%;height:100%;border:0}
+.v-body{padding:12px}
+.v-title{font-weight:700;font-size:13px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.3}
 .v-date{font-size:11px;color:var(--muted);margin-top:4px}
-/* ZONA DE LINKS */
 .links-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:24px}
 @media(min-width:700px){.links-grid{grid-template-columns:repeat(3,1fr)}}
-.link-card{background:#11132b;border:1px solid var(--line);border-radius:20px;padding:18px;text-decoration:none;color:#fff;display:flex;flex-direction:column;gap:10px;transition:.2s}
-.link-card:hover{transform:translateY(-3px);border-color:var(--blue);box-shadow:0 0 20px rgba(0,229,255,.15)}
-.link-icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:20px}
-.link-card h3{font-family:'Syne';font-weight:800;font-size:16px}
-.link-card p{font-size:12px;color:var(--muted);line-height:1.4}
-.link-url{font-size:10px;color:var(--blue);word-break:break-all;margin-top:4px}
-.discord{text-align:center;padding:64px 16px;background:radial-gradient(ellipse at center, rgba(0,229,255,.12), transparent 70%)}
-footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
-#loading{color:var(--muted);font-size:14px;text-align:center;padding:20px}
+.link-card{background:#11132b;border:1px solid var(--line);border-radius:20px;padding:18px;text-decoration:none;color:#fff;transition:.2s}
+.link-card:hover{transform:translateY(-3px);border-color:var(--blue)}
+#loading{color:var(--muted);text-align:center;padding:24px}
 </style>
 </head>
 <body>
-<header><div class="container" style="display:flex;justify-content:space-between;align-items:center;height:56px"><div class="logo"><img class="logo-img" src="https://i.postimg.cc/nrSc2Fzg/44ea40dc-0e21-519e-3316-1fbd08966ca2.jpg"> The_BrazilianSammy</div></div></header>
+<header><div class="container"><div class="logo"><img class="logo-img" src="https://i.postimg.cc/nrSc2Fzg/44ea40dc-0e21-519e-3316-1fbd08966ca2.jpg"> The_BrazilianSammy</div></div></header>
 
 <div class="hero"><div class="container hero-layout">
-  <div style="order:1;flex:1.2">
-    <div class="badge">● NOVO: HEADBOP DOS INSCRITOS 3 EM BREVE</div>
-    <h1 class="hero-title">ROBLOX COM<br><span>PERSONALIDADE</span><br>E ESTILO.</h1>
-    <p class="hero-desc">Gameplays, headbops de Neymar, CR7, Messi, memes e muita zoeira. Vibe 100% BR.</p>
-    <div class="hero-actions"><a href="https://youtube.com/@the_braziliansammy" target="_blank" class="btn btn-blue">▶ Ver Canal</a><a href="https://discord.gg/794qqXym7" target="_blank" class="btn btn-ghost">Entrar no Discord</a></div>
-  </div>
-  <div class="avatar-wrap" style="order:2"><div class="avatar-card"><div class="avatar-inner"><img class="avatar-main-img" src="https://i.postimg.cc/nrSc2Fzg/44ea40dc-0e21-519e-3316-1fbd08966ca2.jpg"></div></div></div>
+  <div style="flex:1.2"><div class="badge">● HEADBOP DOS INSCRITOS 3 EM BREVE</div><h1 class="hero-title">ROBLOX COM<br><span>PERSONALIDADE</span><br>E ESTILO.</h1><p style="margin-top:14px;color:var(--muted)">Gameplays, headbops e zoeira 100% BR.</p><div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap"><a href="https://youtube.com/@the_braziliansammy" target="_blank" class="btn btn-blue">▶ Ver Canal</a><a href="https://discord.gg/794qqXym7" target="_blank" class="btn btn-ghost">Discord</a></div></div>
+  <div style="width:100%;display:flex;justify-content:center"><div class="avatar-card"><div class="avatar-inner"><img class="avatar-main-img" src="https://i.postimg.cc/nrSc2Fzg/44ea40dc-0e21-519e-3316-1fbd08966ca2.jpg"></div></div></div>
 </div></div>
 
 <section id="videos"><div class="container">
   <h2 class="section-title">ÚLTIMOS VÍDEOS</h2>
-  <div id="loading">🔄 Buscando seus últimos vídeos...</div>
+  <p style="color:var(--muted);font-size:12px;margin-top:6px">Atualiza sozinho do YouTube</p>
+  <div id="loading">🔄 Carregando 4 vídeos...</div>
   <div id="videosGrid" class="videos" style="display:none"></div>
 </div></section>
 
-<section id="sobre"><div class="container"><div style="color:var(--blue);font-size:10px;letter-spacing:.3em;font-weight:700;margin-bottom:10px">SOBRE O CANAL</div><h2 class="section-title">Não é só Roblox.<br>É atitude.</h2><p style="color:var(--muted);font-size:14px;margin-top:12px">Fala! Aqui é o <b style="color:#fff">The_BrazilianSammy</b>. Gameplays com muita personalidade, desafios, memes e os famosos <span style="color:var(--blue)">headbops do Neymar, CR7 e Messi</span>.</p></div></section>
-
-<!-- NOVA ZONA DE LINKS -->
-<section id="links" style="background:rgba(255,255,255,.02)">
-  <div class="container">
-    <div style="color:var(--blue);font-size:10px;letter-spacing:.3em;font-weight:700;margin-bottom:10px">CONECTE-SE</div>
-    <h2 class="section-title">ZONA DE LINKS</h2>
-    <p style="color:var(--muted);font-size:14px;margin-top:8px">Todos os meus links oficiais em um só lugar.</p>
-    <div class="links-grid">
-      
-      <a href="https://youtube.com/@the_braziliansammy" target="_blank" class="link-card">
-        <div class="link-icon" style="background:rgba(255,0,0,.15);border:1px solid rgba(255,0,0,.3)">▶️</div>
-        <h3>Meu Canal</h3>
-        <p>Gameplays, headbops e muito conteúdo brabo toda semana.</p>
-        <div class="link-url">youtube.com/@the_braziliansammy</div>
-      </a>
-
-      <a href="https://discord.gg/794qqXym7" target="_blank" class="link-card">
-        <div class="link-icon" style="background:rgba(88,101,242,.15);border:1px solid rgba(88,101,242,.3)">💬</div>
-        <h3>Meu Discord</h3>
-        <p>Entra pra comunidade, participa do Headbop dos Inscritos 3 e troca ideia.</p>
-        <div class="link-url">discord.gg/794qqXym7</div>
-      </a>
-
-      <a href="https://thebraziliansammy.github.io/BrazilianSammy-WebHook-System/" target="_blank" class="link-card">
-        <div class="link-icon" style="background:rgba(0,229,255,.15);border:1px solid rgba(0,229,255,.3)">🔗</div>
-        <h3>WebHook System</h3>
-        <p>Meu sistema de WebHook oficial para automações e integrações.</p>
-        <div class="link-url">thebraziliansammy.github.io/BrazilianSammy-WebHook-System</div>
-      </a>
-
-    </div>
+<section id="links" style="background:rgba(255,255,255,.02)"><div class="container">
+  <div style="color:var(--blue);font-size:10px;letter-spacing:.3em;font-weight:700;margin-bottom:10px">CONECTE-SE</div>
+  <h2 class="section-title">ZONA DE LINKS</h2>
+  <div class="links-grid">
+    <a href="https://youtube.com/@the_braziliansammy" target="_blank" class="link-card"><h3>▶️ Meu Canal</h3><p style="font-size:12px;color:var(--muted)">youtube.com/@the_braziliansammy</p></a>
+    <a href="https://discord.gg/794qqXym7" target="_blank" class="link-card"><h3>💬 Meu Discord</h3><p style="font-size:12px;color:var(--muted)">discord.gg/794qqXym7</p></a>
+    <a href="https://thebraziliansammy.github.io/BrazilianSammy-WebHook-System/" target="_blank" class="link-card"><h3>🔗 WebHook System</h3><p style="font-size:12px;color:var(--muted)">Sistema oficial</p></a>
   </div>
-</section>
-
-<section id="comunidade" class="discord">
-  <div class="container" style="max-width:700px">
-    <h2 class="section-title">ENTRA PRO<br>DISCORD DA<br><span style="color:#00E5FF">COMUNIDADE.</span></h2>
-    <p style="color:var(--muted);margin-top:12px;font-size:14px">Headbop dos Inscritos 3 já vem aí. Entra e faz parte da comunidade.</p>
-    <a href="https://discord.gg/794qqXym7" target="_blank" class="btn btn-ghost" style="margin-top:20px;padding:14px 28px;border-radius:16px">Entrar no Discord →</a>
-  </div>
-</section>
-
-<footer><div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px"><span>© 2026 The_BrazilianSammy</span><span>Feito com 💙 no Brasil</span></div></footer>
+</div></section>
 
 <script>
-const HANDLE='the_braziliansammy';
-const grid=document.getElementById('videosGrid');
-const loading=document.getElementById('loading');
-async function getChannelId(){
-  try{
-    const proxyUrl=`https://api.allorigins.win/raw?url=${encodeURIComponent('https://www.youtube.com/@'+HANDLE)}`;
-    const res=await fetch(proxyUrl);
-    const html=await res.text();
-    const patterns=[/"externalId":"(UC[\w-]{22})"/,/"channelId":"(UC[\w-]{22})"/,/<meta property="og:url" content="https:\/\/www\.youtube\.com\/channel\/(UC[\w-]{22})"/];
-    for(let p of patterns){const m=html.match(p);if(m)return m[1];}
-    return null;
-  }catch(e){return null;}
-}
-async function loadVideos(){
-  try{
-    let channelId=await getChannelId();
-    if(!channelId) channelId='UCX7NlLW4KClQRlgXGDNfC4w';
-    const rss=`https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
-    const api=`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rss)}`;
-    const r=await fetch(api);
-    const data=await r.json();
-    if(!data.items||data.items.length===0) throw new Error('sem videos');
-    const videos=data.items.slice(0,4);
-    grid.innerHTML=videos.map(v=>{
-      const vid=v.link.split('v=')[1];
-      const thumb=`https://img.youtube.com/vi/${vid}/hqdefault.jpg`;
-      const date=new Date(v.pubDate).toLocaleDateString('pt-BR');
-      return `<a href="${v.link}" target="_blank" class="v-card"><div class="v-thumb"><img src="${thumb}" loading="lazy"></div><div class="v-body"><div class="v-title">${v.title}</div><div class="v-date">${date}</div></div></a>`;
-    }).join('');
-    loading.style.display='none';
-    grid.style.display='grid';
-  }catch(err){
-    loading.innerHTML=`⚠️ Não consegui carregar agora.<br><a href="https://youtube.com/@${HANDLE}" target="_blank" style="color:#00E5FF">Ver canal no YouTube →</a>`;
+const CHANNEL_ID = 'UCfg6RKTzx8Wj2pvtc_olVSw';
+const UPLOADS_PLAYLIST = 'UUfg6RKTzx8Wj2pvtc_olVSw';
+
+async function loadVideos() {
+  const grid = document.getElementById('videosGrid');
+  const loading = document.getElementById('loading');
+
+  // MÉTODO 1: API lemnoslife - playlistItems (funciona no GitHub)
+  try {
+    const url = `https://yt.lemnoslife.com/noKey/playlistItems?part=snippet&playlistId=${UPLOADS_PLAYLIST}`;
+    const res = await fetch(url);
+    const data = await res.json();
+    if (data && data.items && data.items.length > 0) {
+      const videos = data.items.slice(0, 4);
+      grid.innerHTML = videos.map(item => {
+        const snip = item.snippet;
+        const videoId = snip.resourceId.videoId;
+        const title = snip.title;
+        const thumb = snip.thumbnails.medium.url;
+        const date = new Date(snip.publishedAt).toLocaleDateString('pt-BR');
+        return `
+          <a href="https://www.youtube.com/watch?v=${videoId}" target="_blank" class="v-card">
+            <div class="v-thumb"><img src="${thumb}" loading="lazy" alt="${title}"></div>
+            <div class="v-body"><div class="v-title">${title}</div><div class="v-date">${date}</div></div>
+          </a>
+        `;
+      }).join('');
+      loading.style.display = 'none';
+      grid.style.display = 'grid';
+      return;
+    }
+  } catch (e) {
+    console.log('Método 1 falhou', e);
   }
+
+  // MÉTODO 2 - FALLBACK GARANTIDO: 4 iframes com seus últimos vídeos (sempre funciona)
+  console.log('Usando fallback com 4 iframes');
+  grid.innerHTML = [0,1,2,3].map(i => `
+    <div class="v-card">
+      <div class="v-thumb">
+        <iframe src="https://www.youtube.com/embed?listType=playlist&list=${UPLOADS_PLAYLIST}&index=${i+1}" 
+        frameborder="0" allowfullscreen loading="lazy" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+        </iframe>
+      </div>
+      <div class="v-body">
+        <div class="v-title">Vídeo #${i+1} - The_BrazilianSammy</div>
+        <div class="v-date">youtube.com/@the_braziliansammy</div>
+      </div>
+    </div>
+  `).join('');
+  loading.style.display = 'none';
+  grid.style.display = 'grid';
 }
+
 loadVideos();
 </script>
 </body>
