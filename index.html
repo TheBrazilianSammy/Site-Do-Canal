@@ -5,17 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The_BrazilianSammy - Site Oficial</title>
 <meta name="description" content="Site oficial do The_BrazilianSammy - Roblox com personalidade e estilo">
-
-<!-- ÍCONE DO ATALHO - SÓ ISSO MUDA -->
 <link rel="icon" type="image/png" href="https://i.postimg.cc/qvkn2yXK/25-Sem-Titulo-20261017120112.png">
 <link rel="apple-touch-icon" href="https://i.postimg.cc/qvkn2yXK/25-Sem-Titulo-20261017120112.png">
-<link rel="apple-touch-icon" sizes="180x180" href="https://i.postimg.cc/qvkn2yXK/25-Sem-Titulo-20261017120112.png">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="The_BrazilianSammy">
 <meta name="theme-color" content="#070913">
-<meta name="application-name" content="The_BrazilianSammy">
-<link rel="manifest" href='data:application/json;base64,[STRIPPED]'>
-
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -46,14 +38,15 @@ section{padding:48px 0;border-top:1px solid var(--line)}
 .v-card:hover{transform:translateY(-4px);border-color:var(--blue);box-shadow:0 0 20px rgba(0,229,255,.15)}
 .v-thumb{aspect-ratio:16/9;background:#0e1020;position:relative;overflow:hidden}
 .v-thumb img{width:100%;height:100%;object-fit:cover}
-.v-thumb iframe{width:100%;height:100%;border:0}
 .v-body{padding:12px}
 .v-title{font-weight:700;font-size:13px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.3}
 .v-date{font-size:11px;color:var(--muted);margin-top:4px}
 .links-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:24px}
-@media(min-width:700px){.links-grid{grid-template-columns:repeat(3,1fr)}}
-.link-card{background:#11132b;border:1px solid var(--line);border-radius:20px;padding:18px;text-decoration:none;color:#fff;transition:.2s}
+@media(min-width:700px){.links-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.links-grid{grid-template-columns:repeat(4,1fr)}}
+.link-card{background:#11132b;border:1px solid var(--line);border-radius:20px;padding:18px;text-decoration:none;color:#fff;transition:.2s;position:relative;overflow:hidden}
 .link-card:hover{transform:translateY(-3px);border-color:var(--blue)}
+.link-card.new{border-color:rgba(0,229,255,.4);background:linear-gradient(180deg,rgba(0,229,255,.12),#11132b);box-shadow:0 0 20px rgba(0,229,255,.15)}
 #loading{color:var(--muted);text-align:center;padding:24px}
 footer{border-top:1px solid var(--line);padding:32px 0 40px 0;background:rgba(0,0,0,.2)}
 .footer-inner{display:flex;flex-direction:column;gap:12px;align-items:center;justify-content:space-between;text-align:center}
@@ -87,6 +80,7 @@ footer{border-top:1px solid var(--line);padding:32px 0 40px 0;background:rgba(0,
     <a href="https://youtube.com/@the_braziliansammy" target="_blank" class="link-card"><h3>▶️ Meu Canal</h3><p style="font-size:12px;color:var(--muted)">youtube.com/@the_braziliansammy</p></a>
     <a href="https://discord.gg/794qqXym7" target="_blank" class="link-card"><h3>💬 Meu Discord</h3><p style="font-size:12px;color:var(--muted)">discord.gg/794qqXym7</p></a>
     <a href="https://thebraziliansammy.github.io/BrazilianSammy-WebHook-System/" target="_blank" class="link-card"><h3>🔗 WebHook System</h3><p style="font-size:12px;color:var(--muted)">Sistema oficial</p></a>
+    <a href="https://thebraziliansammy.github.io/SY-login-system/" target="_blank" class="link-card new"><h3>🔐 SY Login System</h3><p style="font-size:12px;color:var(--muted)">Meu sistema de login próprio</p><span style="display:inline-block;margin-top:10px;font-size:10px;color:var(--blue);font-weight:800;letter-spacing:.15em;background:rgba(0,229,255,.15);padding:4px 10px;border-radius:999px;border:1px solid rgba(0,229,255,.25)">NOVO • ACESSAR →</span></a>
   </div>
 </div></section>
 
